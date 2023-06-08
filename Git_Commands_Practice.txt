@@ -1,0 +1,150 @@
+git config --global user.name "Rajasekhar"
+git config --global user.email"sam@example.com"
+ 
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git init
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ which git
+/mingw64/bin/git
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git commit -m "Commit message"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    gitAssign.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git push
+Everything up-to-date
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git rm gitAssign.txt
+rm 'gitAssign.txt'
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git commit -m "Commit message"
+[main 7226889] Commit message
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 gitAssign.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (2/2), 184 bytes | 184.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rajasekhar19/DevOpsTraining.git
+   05ba469..7226889  main -> main
+------------------------------------------------------------------------------------------------
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects
+$ git clone https://github.com/rajasekhar19/DevOpsTraining.git
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects
+$ git init
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects (master)
+$ cd DevOpsTraining
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ touch  gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git add  gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git add .   (to add all files in current dir)
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git commit -m "My First commit"
+[main 53c1d01] My First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (3/3), 260 bytes | 260.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rajasekhar19/DevOpsTraining.git
+   7226889..53c1d01  main -> main
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git branch
+* main
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git status
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git log
+--------------------------------------------------------------------------
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git checkout -b f1
+Switched to a new branch 'f1'
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git branch
+* f1
+  main
+  
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git switch f1
+Already on 'f1'
+M       gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git add gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git commit -m "First commit in f1"
+[f1 e4e1a11] First commit in f1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git push
+fatal: The current branch f1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin f1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git push origin f1
+---------------------------------------------------------------------------
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f1)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git checkout -b f2
+Switched to a new branch 'f2'
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f2)
+$ git add gitAssignment.txt
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f2)
+$ git commit -m "First commit in f2"
+[f2 3acb544] First commit in f2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f2)
+$ git push origin f2
+-----------------------------------------------------------------------------
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (f2)
+$ git switch main
+
+HOME@DESKTOP-60PLJSI MINGW64 /h/GRSR/git_projects/DevOpsTraining (main)
+$ git merge f1
+------------------------------------------------------------------------------
+ git push --set-upstream https://github.com/rajasekhar19/APIThrottling.git master
